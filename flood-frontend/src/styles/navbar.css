@@ -1,24 +1,44 @@
+/* =========================
+   NAVBAR BASE
+========================= */
+
 .navbar {
-  background: #fff;
-  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #e2e8f0;
 }
+
+/* =========================
+   NAV CONTAINER
+========================= */
 
 .nav-container {
   max-width: 1200px;
-  margin: auto;
-  padding: 16px 20px;
+  margin: 0 auto;
+  padding: 14px 24px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
+
+/* =========================
+   LOGO
+========================= */
 
 .logo {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
+  font-size: 20px;
   font-weight: 700;
+  color: #0f172a;
+  letter-spacing: 0.3px;
 }
 
+/* Small accent dot */
 .logo .dot {
   width: 10px;
   height: 10px;
@@ -26,13 +46,85 @@
   border-radius: 50%;
 }
 
-.nav-links a {
-  margin-left: 20px;
-  color: #334155;
+/* =========================
+   NAV LINKS
+========================= */
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+  align-items: center;
 }
 
-@media (max-width: 600px) {
+.nav-links a {
+  position: relative;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  color: #334155;
+  padding: 6px 0;
+  transition: color 0.25s ease;
+}
+
+/* Hover underline animation */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 2px;
+  background: #2563eb;
+  transition: width 0.25s ease;
+}
+
+.nav-links a:hover {
+  color: #2563eb;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* =========================
+   ACTIVE LINK (OPTIONAL)
+========================= */
+
+/* If you later switch to NavLink */
+.nav-links a.active {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.nav-links a.active::after {
+  width: 100%;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+/* TABLET */
+@media (max-width: 900px) {
+  .nav-container {
+    padding: 12px 20px;
+  }
+
   .nav-links {
-    display: none;
+    gap: 20px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: space-between;
   }
 }
