@@ -1,0 +1,166 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, sans-serif;
+  background: #f5f8fc;
+  color: #0f172a;
+}
+
+/* NAVBAR */
+.navbar {
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo .dot {
+  width: 10px;
+  height: 10px;
+  background: #2563eb;
+  border-radius: 50%;
+}
+
+.nav-links a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #334155;
+}
+
+/* PAGE */
+.page {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+/* HERO */
+.hero {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 40px;
+}
+
+.hero-text h1 {
+  font-size: 42px;
+}
+
+.hero-buttons {
+  margin-top: 20px;
+}
+
+.primary {
+  background: #2563eb;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 10px;
+  border: none;
+}
+
+.secondary {
+  margin-left: 10px;
+  padding: 10px 18px;
+  border-radius: 10px;
+  border: 1px solid #2563eb;
+  background: transparent;
+}
+
+/* STATUS CARD */
+.status-card {
+  background: white;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.status-card .level {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.bar {
+  background: #e5e7eb;
+  height: 10px;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+.bar .fill {
+  width: 80%;
+  height: 100%;
+  background: #dc2626;
+  border-radius: 10px;
+}
+
+/* ACTIVITY */
+.activity-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 30px;
+}
+
+/* GALLERY */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px,1fr));
+  gap: 20px;
+}
+
+.gallery-item {
+  background: white;
+  padding: 40px;
+  text-align: center;
+  border-radius: 12px;
+}
+
+/* CONTACT */
+.contact-form {
+  max-width: 500px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 14px;
+  border-radius: 8px;
+  border: 1px solid #cbd5f5;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .activity-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-text h1 {
+    font-size: 30px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+}

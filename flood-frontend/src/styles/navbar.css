@@ -1,0 +1,38 @@
+.navbar {
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+}
+
+.logo .dot {
+  width: 10px;
+  height: 10px;
+  background: #2563eb;
+  border-radius: 50%;
+}
+
+.nav-links a {
+  margin-left: 20px;
+  color: #334155;
+}
+
+@media (max-width: 600px) {
+  .nav-links {
+    display: none;
+  }
+}

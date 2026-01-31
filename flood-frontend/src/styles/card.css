@@ -1,0 +1,36 @@
+.status-card {
+  background: white;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.status-card.normal {
+  border-left: 6px solid #22c55e;
+}
+
+.status-card.warning {
+  border-left: 6px solid #f59e0b;
+}
+
+.status-card.danger {
+  border-left: 6px solid #ef4444;
+}
+
+.level {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.bar {
+  background: #e5e7eb;
+  height: 10px;
+  border-radius: 10px;
+  margin: 12px 0;
+}
+
+.bar .fill {
+  height: 100%;
+  background: #2563eb;
+  border-radius: 10px;
+}
